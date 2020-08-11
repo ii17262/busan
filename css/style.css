@@ -161,13 +161,11 @@
 .lazy div a img {
   width: 100%;
 }
-.slick-slide::after{
+.slick-slide::after {
   content: "";
   display: block;
   clear: both;
 }
-
-
 
 /*슬라이드 버튼*/
 #section1 .slick-arrow {
@@ -225,9 +223,9 @@
   width: 300px;
   height: 300px;
 }
-#section2 .m_back{
+#section2 .m_back {
   display: none;
-} 
+}
 #section2 .a_icon img {
   width: 100%;
 }
@@ -271,7 +269,7 @@
   font-weight: 100;
   color: rgb(90, 90, 90);
 }
-#section2 .sec2_tit ul li a:hover{
+#section2 .sec2_tit ul li a:hover {
   text-decoration: underline;
   color: #c29091;
 }
@@ -376,6 +374,8 @@
   left: 50%;
   z-index: 9999;
   cursor: pointer;
+  border: none;
+  text-indent: -99999px;
 }
 #section3 .regular .slick-next {
   width: 100px;
@@ -386,6 +386,8 @@
   right: 46%;
   z-index: 9999;
   cursor: pointer;
+  border: none;
+  text-indent: -99999px;
 }
 #section3:after {
   content: "";
@@ -469,7 +471,7 @@
   font-size: 1.1rem;
 }
 #sec4_5_back {
-  background: url('images/sec4_5_back.jpg') no-repeat center;
+  background: url("images/sec4_5_back.jpg") no-repeat center;
 }
 
 #section4:after {
@@ -573,7 +575,9 @@
   z-index: 9999;
   cursor: pointer;
 }
-#section5 .regular a img{width: 100%;}
+#section5 .regular a img {
+  width: 100%;
+}
 #section5 .notice_box {
   float: left;
   width: 60%;
@@ -608,7 +612,7 @@
 #section5 .notice_box .notice_txt_box .n_c {
   text-align: left;
   padding-top: 20px;
-  overflow:hidden;
+  overflow: hidden;
 }
 #section5 .notice_box .notice_txt_box .n_c p {
   font-size: 1.1rem;
@@ -653,7 +657,7 @@
   float: left;
   position: relative;
 }
-#section6 .instargram .inst_box img{
+#section6 .instargram .inst_box img {
   width: 100%;
 }
 #section6 .instargram .instargam_on {
@@ -738,7 +742,7 @@ a {
 /*아무리못해도 1180까지는 브레이크포인트 안잡아도 안깨저야함 */
 
 @media all and (max-width: 1180px) {
-  .inner{
+  .inner {
     max-width: 1080px;
   }
   /*메뉴*/
@@ -806,7 +810,7 @@ a {
 }
 
 @media all and (max-width: 1050px) {
-  .inner{
+  .inner {
     max-width: 980px;
   }
   #header .main_mn li a {
@@ -822,7 +826,7 @@ a {
   #section5 .notice_box .notice_txt_box .n_t {
     padding-top: 25px;
   }
-  #section5 .news_box .regular div{
+  #section5 .news_box .regular div {
     width: 100%;
   }
   #footer .top_footer .footer_txt {
@@ -832,18 +836,26 @@ a {
 /* 980px 그전에 찌그러지면 미리 브레이크포인트를 잡아서 중간단계 넣음 그게 태블릿*/
 
 @media all and (max-width: 780px) {
-  .inner{
+  .lazy > div {
+    width: 100%;
+    padding-bottom: 0px;
+}
+
+  .inner {
     max-width: 680px;
   }
   #header .main_mn {
     display: none;
   }
-  #header .nav_btn{
+  #header .nav_btn {
     display: block;
     margin-top: 20px;
   }
-  #header .info{
+  #header .info {
     display: none;
+  }
+  #section1{
+    margin-bottom: 40px;
   }
   #section1 .slick-dots li button {
     display: none;
@@ -861,6 +873,12 @@ a {
   .sum_mn .sns_box a {
     width: 40px;
   }
+  #section2 {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
   #section2 .sec2_img_box {
     display: none;
   }
@@ -875,12 +893,19 @@ a {
   #section2 .sec2_tit h3 {
     text-align: center;
     font-size: 2.5rem;
+    padding-bottom: 10px;
   }
   #section2 .sec2_tit p {
-    width: 90%;
-    font-size: 1.1rem;
+    width: 80%;
+    font-size: 0.9rem;
     line-height: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    /*font-weight: lighter;
+    letter-spacing: 1px;*/
   }
+  
   #section2 .more_box {
     display: none;
   }
@@ -888,26 +913,26 @@ a {
     margin: 40px 0 0 30px;
   }
   #section2 .sec2_tit ul li {
-    list-style: disc;
-    padding-bottom: 30px;
+    list-style: none;
+    padding-bottom: 5px;
+    text-align: center;
   }
   .sec2_back {
     display: none;
   }
-  #section2 .m_back{
+  #section2 .m_back {
     width: 350px;
     display: block;
     position: absolute;
-    top:110%;
+    top: 110%;
     right: 0%;
-  } 
-  #section2 .m_back img{
-    width: 90%;
+    display: none;
   }
   #section3 .sec3_back {
     height: 320px;
   }
-  #section3 .regular .slick-prev, #section3 .regular .slick-next {
+  #section3 .regular .slick-prev,
+  #section3 .regular .slick-next {
     width: 0px;
     height: 0px;
     background: none;
@@ -924,25 +949,35 @@ a {
     margin-right: 10px;
     /* box-shadow: 3px 3px 3px #000000; */
   }
-/*programs*/
+  /*programs*/
+  #section4{
+    margin-bottom: 40px;
+  }
   #section4 .pro1 .pro1_ibox {
-    float: none;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    float: none;
     margin: 0 auto;
     width: 60%;
   }
   #section4 .pro1 .pro1_txt {
-    float: left;
-    width: 60%;
-    margin: 10px 0 0 160px;
+    float: none;
+    width: 80%;
+    margin: 0 auto;
   }
   #section4 .pro1 .pro1_txt .view_more {
     float: none;
-    padding-top: 40px;
+    padding-top: 20px;
     margin: 0 auto;
     width: 100px;
   }
-  #section4 h3, #section4 .pro1 .pro1_txt p {
+  #section4 .pro1 h3{
+    font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
+    padding-top: 5px;
+  }
+  #section4 .pro1 .pro1_txt p{
+    text-align: center;
+    font-size: 0.9rem;
   }
   #section4 .pro2 .pro2_ibox {
     float: none;
@@ -950,37 +985,59 @@ a {
     width: 50%;
   }
   #section4 .pro2 .pro2_txt {
-    float: left;
-    width: 50%;
+    float: none;
+    width: 80%;
+    /* text-align: center;
+    margin: 30px 0 0 160px; */
+    margin: 0 auto;
+  }
+  #section4 .pro2 h3{
+    font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
-    margin: 30px 0 0 160px;
+    padding-top: 20px;
   }
   #section4 .pro2 .pro2_txt p {
     padding-top: 20px;
     font-size: 0.9rem;
     font-weight: lighter;
+    text-align: center;
   }
   #section4 .pro2 .pro2_txt .view_more {
     float: none;
-    padding-top: 40px;
+    padding-top: 20px;
     margin: 0 auto;
     width: 100px;
   }
   /* 보도자료 */
-
+  #section5 {
+    margin-bottom: 40px;
+    margin-top: 0;
+    /* width: 100%;*/
+     float: none;
+  }
   #section5 .sec5_inner {
-    max-width: 680px;
+    max-width: 450px;
+    /* margin: 0 auto; */
+    padding-top: 0px;
     margin: 0 auto;
+  }
+  #section5 h1{
+    display: none;
   }
   #section5 .news_box {
     width: 100%;
     border: none;
     height: auto;
     float: none;
+    margin-bottom: 40px;
   }
-  #section5 .regular .slick-prev, #section5 .regular .slick-next {
+  #section5 .regular .slick-prev,
+  #section5 .regular .slick-next {
     width: 40px;
     height: 40px;
+    border: none;
+    text-indent: -99999px;
   }
   #section5 .news_box .news_tit {
     text-align: center;
@@ -1001,6 +1058,11 @@ a {
   #section5 .notice_box {
     width: 100%;
     float: none;
+  }
+  #section5 .notice_box::after{
+    content: "";
+    display: block;
+    clear: both;
   }
   #section5 .notice_box .notice_tit {
     text-align: center;
@@ -1025,11 +1087,12 @@ a {
     padding-top: 3px;
   }
   #section5 .notice_box .notice_img_box {
-    padding-top: 35px;
+   display: none;
   }
   #section6 {
     margin-top: 0;
-    height: 700px;
+    height: auto;
+    padding-bottom: 40px;
   }
   #section6 .instargram .inst_box {
     /* width: calc((100% - 53px) / 3); */
@@ -1037,12 +1100,12 @@ a {
     float: left;
     position: relative;
   }
-  #section6 .instargram .inst_box:nth-child(n+7):nth-child(-n+10){
+  #section6 .instargram .inst_box:nth-child(n + 7):nth-child(-n + 10) {
     display: none;
   }
 
-  #footer{
-    padding: 20px 0 20px 0;
+  #footer {
+    padding-top: 20px
   }
   #footer .top_footer h2 {
     width: 100%;
@@ -1050,24 +1113,24 @@ a {
     float: none;
     text-align: center;
   }
-  #footer .top_footer h2 img{
+  #footer .top_footer h2 img {
     width: 150px;
   }
   #footer .top_footer .footer_txt {
     width: 100%;
     padding-left: 0;
     padding-top: 20px;
+    text-align: center;
   }
   #footer .top_footer .footer_txt > div {
     float: left;
     padding-right: 0px;
     width: 33.3%;
+  }
+  #footer .top_footer .footer_txt > div:last-child {
+    padding-top: 10px;
+  } 
+  #footer .top_footer .footer_txt .SNS{
+    display: none;
+  }
 }
-#footer .top_footer .footer_txt > div:last-child{
-  width: 100%;
-  float: none;
-  clear: both;
-}
-
-}
-

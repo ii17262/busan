@@ -28,6 +28,20 @@ $(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      } /*, {  breakpoint: 768,
+             settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+             }
+        }*/,
+    ], //반응형 포인트 지정
   });
 
   $("#section5 .regular").slick({
